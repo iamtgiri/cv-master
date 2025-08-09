@@ -14,7 +14,7 @@ st.set_page_config(page_title="CV Master", layout="centered", page_icon="📄")
 with st.sidebar:
     col1, col2, col3 = st.columns([2, 3, 2])  # Increase 3rd column width
     with col2:
-        st.image("Logo.png", width=100)
+        st.image("logo.png", width=100)
 
     st.markdown(
         """
@@ -50,7 +50,7 @@ with st.sidebar:
 # ----------------- HEADER -----------------
 col1, col2, col3 = st.columns([20, 10, 20])  # Increase 3rd column width
 with col2:
-    st.image("Logo.png", width=150)
+    st.image("logo.png", width=150)
 
 st.markdown("<h4 style='text-align: center;'>Evaluation, Skill Analysis, Scoring & Grammar Review</h4>", unsafe_allow_html=True)
 st.markdown("<hr>", unsafe_allow_html=True)
