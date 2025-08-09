@@ -41,7 +41,7 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(
         "[LinkedIn](https://www.linkedin.com/in/iamtgiri) | "
-        "[Source Code](https://github.com/yourusername/yourrepo)",
+        "[Source Code](https://github.com/iamtgiri/cv-master)",
         unsafe_allow_html=True
     )
     st.info("Clone the repo from GitHub to run locally.")
