@@ -41,11 +41,11 @@ with st.sidebar:
     st.markdown("---")
     st.markdown(
         "[LinkedIn](https://www.linkedin.com/in/iamtgiri) | "
-        "[Source Code](https://github.com/yourusername/yourrepo) | "
-        "[Portfolio](https://iamtgiri.github.io)",
+        "[Source Code](https://github.com/yourusername/yourrepo)",
         unsafe_allow_html=True
     )
-    st.info("You can clone the repository from GitHub and run it locally.")
+    st.info("Clone the repo from GitHub to run locally.")
+
 
 # ----------------- HEADER -----------------
 col1, col2, col3 = st.columns([20, 10, 20])  # Increase 3rd column width
