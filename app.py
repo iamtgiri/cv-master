@@ -6,7 +6,10 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import os
 import tempfile
+from dotenv import load_dotenv
 
+load_dotenv()
+google_api_key = os.getenv("GOOGLE_API_KEY")
 # ----------------- PAGE CONFIG -----------------
 st.set_page_config(page_title="CV Master", layout="centered", page_icon="📄")
 
@@ -80,9 +83,8 @@ st.markdown("<hr>", unsafe_allow_html=True)
 model = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash-lite",
     temperature=0.7,
-    # google_api_key=api_key
-    google_api_key = 'AIzaSyDNH5RD7Q5BCBzWSPWzXB9bk4f2Vcktfm4',
-    max_output_tokens=2048
+    max_output_tokens=2048,
+    google_api_key=google_api_key  # Use environment variable for API key
 )
 parser = StrOutputParser()
 
