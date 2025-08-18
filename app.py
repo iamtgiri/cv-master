@@ -56,31 +56,33 @@ st.markdown("<h4 style='text-align: center;'>Evaluation, Skill Analysis, Scoring
 st.markdown("<hr>", unsafe_allow_html=True)
 
 # ----------------- API KEY -----------------
-api_key = st.text_input(
-    "Enter your Gemini API Key and press ENTER",
-    type="password",
-    value=os.getenv("GOOGLE_API_KEY", "")
-)
+# api_key = st.text_input(
+#     "Enter your Gemini API Key and press ENTER",
+#     type="password",
+#     value=os.getenv("GOOGLE_API_KEY", "")
+# )
 
-with st.expander("ℹ️ How to get a Gemini API Key"):
-    st.markdown(
-        """
-        1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey).
-        2. Sign in with your Google account.
-        3. Click **Get API Key** → **+ Create API Key**.
-        4. Copy and paste the key above.
-        """
-    )
+# with st.expander("ℹ️ How to get a Gemini API Key"):
+#     st.markdown(
+#         """
+#         1. Go to [Google AI Studio](https://aistudio.google.com/app/apikey).
+#         2. Sign in with your Google account.
+#         3. Click **Get API Key** → **+ Create API Key**.
+#         4. Copy and paste the key above.
+#         """
+#     )
 
-if not api_key:
-    st.warning("Please enter your Google API key to proceed.")
-    st.stop()
+# if not api_key:
+#     st.warning("Please enter your Google API key to proceed.")
+#     st.stop()
 
 # ----------------- MODEL -----------------
 model = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash-lite",
     temperature=0.7,
-    google_api_key=api_key
+    # google_api_key=api_key
+    google_api_key = 'AIzaSyDNH5RD7Q5BCBzWSPWzXB9bk4f2Vcktfm4',
+    max_output_tokens=2048
 )
 parser = StrOutputParser()
 
